@@ -26,7 +26,7 @@ class Payment(ModelViewSet):
                 id__in=(data['account'], data['to_account'])
             )}
             if len(accounts) != 2:
-                raise exceptions.AccountsNotFound
+                raise exceptions.InvalidAccounts
 
             account = accounts[data['account']]
             to_account = accounts[data['to_account']]
@@ -59,5 +59,3 @@ class Payment(ModelViewSet):
                 raise exceptions.NotEnoughMoney
             
             bulk_update([account, to_account])
-
-        return Response({'status': 'ok'}, status=200)

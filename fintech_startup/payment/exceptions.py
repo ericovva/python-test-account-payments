@@ -6,10 +6,10 @@ class CurrenciesNotMatched(APIException):
     default_code = 'currencies_not_matched'
 
 
-class AccountsNotFound(APIException):
-    status_code = 404
-    default_detail = "Accounts not found"
-    default_code = 'accounts_not_found'
+class InvalidAccounts(APIException):
+    status_code = 400
+    default_detail = "Invalid accounts"
+    default_code = 'invalid_accounts'
 
 
 class NotEnoughMoney(APIException):

@@ -1,5 +1,6 @@
 from django.db import models
 from account.models import Account
+import uuid
 
 class Payment(models.Model):
     OUTGOING = -1
@@ -13,7 +14,7 @@ class Payment(models.Model):
     amount = models.DecimalField(max_digits=100, decimal_places=2)
     to_account = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='to_accounts')
     direction = models.IntegerField(choices=Directions)
-    tr_hash = models.UUIDField()
+    tr_hash = models.UUIDField(default=uuid.uuid4())
 
     @classmethod
     def recalc_account_balance(cls, account_id):
