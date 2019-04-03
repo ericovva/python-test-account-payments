@@ -13,4 +13,4 @@ class Account(models.Model):
     currency = models.CharField(max_length=10, choices=Currencies)
 
     def __str__(self):
-        return '{}: {}'.format(self.id, self.currency)
+        return '{}: {} {}'.format(self.id, self.balance, self.currency)

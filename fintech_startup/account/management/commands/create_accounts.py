@@ -7,6 +7,9 @@ class Command(BaseCommand):
     help = 'Create accounts'
 
     def handle(self, *args, **options):
+        if len(Account.objects.all()):
+            return
+
         for cur in Account.Currencies:
             acc1 = Account.objects.create(id=uuid.uuid4(), currency=cur[0], balance=0)
             acc2 = Account.objects.create(id=uuid.uuid4(), currency=cur[0], balance=0)

@@ -27,7 +27,7 @@ services:
     image: postgres:10
     container_name: ps01
     volumes:
-        - "/var/lib/postgresql/data"
+        - /var/lib/postgresql/data
     environment:
       POSTGRES_DB: transfers
       POSTGRES_USER: steve
