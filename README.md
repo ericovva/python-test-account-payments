@@ -110,12 +110,9 @@ and go to default IP http://192.168.99.100
 
   * **Code:** 201 <br />
     **Content:** `{
-        "id": 1,
-        "amount": "123.12",
-        "direction": 1,
-        "tr_hash": "2df0fe0c-a7e9-41bf-918a-58bfe61d8abf",
-        "account": "a22d244e-bc86-4f4e-8ce8-b087f6281011",
-        "to_account": "a22d244e-bc86-4f4e-8ce8-b087f6281011"
+      "amount": "23.12",
+      "account": "a22d244e-bc86-4f4e-8ce8-b087f6281011",
+      "to_account": "26271333-ad32-495d-9be6-511148572aaf"
     },`
 * **Error Response:**
   * **Code:** 400 <br />
