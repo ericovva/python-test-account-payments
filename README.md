@@ -11,6 +11,12 @@ docker-compose up --build
 ```
 go to default IP http://192.168.99.100 in your browser
 
+**Run tests**
+----
+```
+docker exec -it <container_hash> /bin/bash
+python mange.py test
+```
 
 **Get available accounts**
 ----
