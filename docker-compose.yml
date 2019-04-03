@@ -12,6 +12,17 @@ services:
     depends_on:
       - web
 
+  postgres:
+    image: postgres:10
+    container_name: ps01
+    volumes:
+        - /var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: transfers
+      POSTGRES_USER: steve
+    ports:
+      - "5432:5432"
+
   web:
     build: .
     container_name: dg01
@@ -23,13 +34,3 @@ services:
     ports:
       - "9000:9000"
 
-  postgres:
-    image: postgres:10
-    container_name: ps01
-    volumes:
-        - /var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: transfers
-      POSTGRES_USER: steve
-    ports:
-      - "5432:5432"

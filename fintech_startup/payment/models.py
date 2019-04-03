@@ -18,6 +18,7 @@ class Payment(models.Model):
 
     @classmethod
     def recalc_account_balance(cls, account_id):
+        """Recount balance of account"""
         amounts = cls.objects.filter(
             account=account_id,
         ).aggregate(

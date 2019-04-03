@@ -20,6 +20,7 @@ class Payment(ModelViewSet):
     http_method_names = ['get', 'post']
 
     def perform_create(self, serializer):
+        """Make transaction"""
         data = serializer.data
         with transaction.atomic():
             accounts = {acc.id : acc for acc in account_models.Account.objects.select_for_update().filter(
