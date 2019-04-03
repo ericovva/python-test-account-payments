@@ -8,8 +8,8 @@ use commands:
 ```
 docker-compose up postgres
 docker-compose up --build
-and go to default IP http://192.168.99.100
 ```
+go to default IP http://192.168.99.100 in your browser
 
 
 **Get available accounts**
