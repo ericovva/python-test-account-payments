@@ -1,5 +1,5 @@
 **Setup**
-
+----
 clone this repository
 
 install docker and docker-compose on your machine
