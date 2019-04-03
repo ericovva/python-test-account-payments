@@ -23,14 +23,6 @@ go to default IP http://192.168.99.100 in your browser
 * **Method:**
 
   `GET`
-  
-*  **URL Params**
-  
-  None
-
-* **Data Params**
-
-  None
 
 * **Success Response:**
 
@@ -40,9 +32,6 @@ go to default IP http://192.168.99.100 in your browser
         "balance": "0.00",
         "currency": "USD"
     },]`
-* **Error Response:**
-
-  None
   
   
   
@@ -57,14 +46,6 @@ go to default IP http://192.168.99.100 in your browser
 * **Method:**
 
   `GET`
-  
-*  **URL Params**
-  
-  None
-
-* **Data Params**
-
-  None
 
 * **Success Response:**
 
@@ -77,12 +58,8 @@ go to default IP http://192.168.99.100 in your browser
         "account": "a22d244e-bc86-4f4e-8ce8-b087f6281011",
         "to_account": "a22d244e-bc86-4f4e-8ce8-b087f6281011"
     },]`
-* **Error Response:**
-
-  None
   
-  
-  **Post payments**
+**Post payments**
 ----
   Post json data for transfer.
 
@@ -94,10 +71,6 @@ go to default IP http://192.168.99.100 in your browser
 
   `POST`
   
-*  **URL Params**
-  
-  None
-
 * **Data Params**
 
   `{
