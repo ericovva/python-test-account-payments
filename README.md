@@ -1,3 +1,4 @@
+```
 Setup
 
 clone this repository
@@ -15,3 +16,4 @@ API
       account - account id from
       to_account - account id to
       amount - amount of the payment
+```
