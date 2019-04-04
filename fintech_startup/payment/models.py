@@ -2,6 +2,9 @@ from django.db import models
 from account.models import Account
 import uuid
 
+
+# дока к модели
+
 class Payment(models.Model):
     OUTGOING = -1
     INCOMING = 1
@@ -21,6 +24,7 @@ class Payment(models.Model):
         """Recount balance of account"""
         amounts = cls.objects.filter(
             account=account_id,
+            # можно писать account_id=acount_id
         ).aggregate(
             _in=models.Sum('amount', filter=models.Q(direction=cls.INCOMING)),
             _out=models.Sum('amount', filter=models.Q(direction=cls.OUTGOING))

@@ -1,5 +1,6 @@
 from rest_framework.exceptions import APIException
 
+# доки к ошибкам
 class CurrenciesNotMatched(APIException):
     status_code = 400
     default_detail = "Account currencies don't match."

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from account.models import Account
 
-
+# декоратор?
 class AccountAdmin(admin.ModelAdmin):
     list_display = (
         'id',

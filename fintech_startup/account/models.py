@@ -1,5 +1,6 @@
 from django.db import models
 
+# дока
 class Account(models.Model):
     USD = 'USD'
     RUB = 'RUB'

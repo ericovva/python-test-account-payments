@@ -12,10 +12,11 @@ from payment import exceptions
 import uuid
 import logging
 logger = logging.getLogger('django')
+#  логгер не используетсяы
 
-
+# дока
 class Payment(ModelViewSet):
-    queryset = payment_models.Payment.objects.select_related()
+    queryset = payment_models.Payment.objects.select_related() # что ты селектишь релатед?
     serializer_class = payment_serializers.PaymentSer
     http_method_names = ['get', 'post']
 
@@ -52,11 +53,11 @@ class Payment(ModelViewSet):
                     tr_hash=tr_hash
                 )
             ])
-                    
+
             account.balance = payment_models.Payment.recalc_account_balance(account.id)
             to_account.balance = payment_models.Payment.recalc_account_balance(to_account.id)
 
             if account.balance < 0:
                 raise exceptions.NotEnoughMoney
-            
+
             bulk_update([account, to_account])

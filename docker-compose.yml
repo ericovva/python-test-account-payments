@@ -16,6 +16,7 @@ services:
     image: postgres:10
     container_name: ps01
     volumes:
+    # не очень понял зачем тут volume
         - /var/lib/postgresql/data
     environment:
       POSTGRES_DB: transfers
@@ -34,3 +35,5 @@ services:
     ports:
       - "9000:9000"
 
+# Если ты делаешь взаимодействие через nginx, то делай не ports, а expose
+# А то получается я могу достучаться до всего и через nginx и напрямую

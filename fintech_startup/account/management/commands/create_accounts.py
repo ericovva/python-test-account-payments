@@ -3,10 +3,12 @@ from account.models import Account
 from payment.models import Payment
 import uuid
 
+# дока
 class Command(BaseCommand):
     help = 'Create accounts'
 
     def handle(self, *args, **options):
+        # особенно про это надо в доке написать
         if len(Account.objects.all()):
             return
 

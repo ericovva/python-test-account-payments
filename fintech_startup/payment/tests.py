@@ -7,6 +7,7 @@ import uuid
 
 class PaymentTestCase(TestCase):
     def __init__(self, *argv, **kw):
+        # мне кажется id надо создавать в setUp
         self.id1 = uuid.uuid4()
         self.id2 = uuid.uuid4()
         self.id3 = uuid.uuid4()
@@ -17,6 +18,7 @@ class PaymentTestCase(TestCase):
         acc2 = Account.objects.create(id=self.id2, balance=0, currency=Account.USD)
         acc3 = Account.objects.create(id=self.id3, balance=0, currency=Account.RUB)
         Payment.objects.create(account=acc1, to_account=acc1, direction=Payment.INCOMING, amount=100)
+# почему ты только статусы поверяешь? Значения сверить нельзя?
 
     def test_success_payment(self):
         """Test success payment"""

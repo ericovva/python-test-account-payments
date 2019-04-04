@@ -4,7 +4,7 @@ from account import models as account_models
 
 import logging
 logger = logging.getLogger('django')
-
+# логгер не используется
 
 class Account(ModelViewSet):
     queryset = account_models.Account.objects.all()

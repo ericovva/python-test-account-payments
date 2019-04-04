@@ -2,6 +2,7 @@
 ----
 clone this repository
 
+
 install docker and docker-compose on your machine
 
 use commands:
@@ -10,11 +11,13 @@ docker-compose up postgres
 docker-compose up --build
 ```
 go to default IP http://192.168.99.100 in your browser
-
+разве тебе нуе нужен 127.0.0.1
+P S тебе нужен localhost или в nginx поменяй на 127.0.0.1
 **Run tests**
 ----
 ```
 docker exec -it <container_hash> /bin/bash
+--  manage.py
 python mange.py test
 ```
 
@@ -38,9 +41,9 @@ python mange.py test
         "balance": "0.00",
         "currency": "USD"
     },]`
-  
-  
-  
+
+
+
 **Get payments**
 ----
   Returns json data about payments.
@@ -64,7 +67,7 @@ python mange.py test
         "account": "a22d244e-bc86-4f4e-8ce8-b087f6281011",
         "to_account": "a22d244e-bc86-4f4e-8ce8-b087f6281011"
     },]`
-  
+
 **Post payments**
 ----
   Post json data for transfer.
@@ -76,7 +79,7 @@ python mange.py test
 * **Method:**
 
   `POST`
-  
+
 * **Data Params**
 
   `{
@@ -88,11 +91,14 @@ python mange.py test
 * **Success Response:**
 
   * **Code:** 201 <br />
-    **Content:** `{
+    **Content:**
+    заменил бы одиночные кавычки на тройные
+    ```{
       "amount": "23.12",
       "account": "a22d244e-bc86-4f4e-8ce8-b087f6281011",
       "to_account": "26271333-ad32-495d-9be6-511148572aaf"
-    },`
+    }
+    ```
 * **Error Response:**
   * **Code:** 400 <br />
   `{
