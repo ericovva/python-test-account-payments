@@ -1,8 +1,10 @@
+"""Models payment"""
+import uuid
 from django.db import models
 from account.models import Account
-import uuid
 
 class Payment(models.Model):
+    """Model payment"""
     OUTGOING = -1
     INCOMING = 1
 
@@ -26,4 +28,3 @@ class Payment(models.Model):
             _out=models.Sum('amount', filter=models.Q(direction=cls.OUTGOING))
         )
         return (amounts['_in'] or 0) - (amounts['_out'] or 0)
-

@@ -1,10 +1,14 @@
+"""URL routes for account app"""
 from django.conf.urls import url, include
-from account.views import *
 from rest_framework import routers
+from account.views import Account
 
-router = routers.DefaultRouter()
-router.register(r'', Account)
+def urls():
+    """Make urls of routers"""
+    router = routers.DefaultRouter()
+    router.register(r'', Account)
+    return router.urls
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^', include(urls())),
 ]

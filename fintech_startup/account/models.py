@@ -1,6 +1,8 @@
+"""Models account"""
 from django.db import models
 
 class Account(models.Model):
+    """Model account"""
     USD = 'USD'
     RUB = 'RUB'
 
