@@ -5,4 +5,4 @@ ADD /config/req.txt /config/
 RUN pip install -r /config/req.txt
 RUN pip install uwsgi
 WORKDIR /opt/fintech_startup
-CMD python manage.py migrate; python manage.py test; python manage.py create_accounts; uwsgi --ini /opt/config/uwsgi.ini;
+CMD /opt/config/cmd.sh

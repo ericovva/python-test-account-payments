@@ -6,8 +6,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./static:/static
-      - ./media:/media
+      - ./fintech_startup/static:/static
+      - ./fintech_startup/media:/media
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - web
